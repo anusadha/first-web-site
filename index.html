@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume & Cosmetics Store</title>
+    <link rel="stylesheet" href="homestyles.css">
+    <link rel="scripts"  href="myscripts.js">
+</head>
+<body>
+    <header>
+        <h1>Perfume & Cosmetics Store</h1>
+        <nav>
+            <ul>
+                <li><a href="logindex.html">Login</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+     
+    <div class="slideshow-container" >
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="image1.png" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="image2.png" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="image3.png" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+         
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <script>
+          
+let slideIndex = 0;
+showSlides(); 
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+        </script>
+       
+  
+
+    <section>
+
+        <h2>Welcome to Our Store</h2>
+        <p>Explore a wide range of perfumes and cosmetics.</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <h3>Fragrance 1</h3>
+            <p>Price: $49.99</p>
+            <div class="quantity buttons_added">
+              <input id="minus" type="button" class="minus" value="-">
+              <input id="theInput" type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+              <input id="plus" type="button" class="plus" value="+">
+            </div>
+        </div>
+        <div class="product">
+            <h3>Fragrance 2</h3>
+            <p>Price: $59.99</p>
+            <div class="quantity buttons_added">
+              <input id="minus" type="button" class="minus" value="-">
+              <input id="theInput" type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+              <input id="plus" type="button" class="plus" value="+">
+            </div>
+        </div>
+        <div class="product">
+            <h3>Cosmetic 1</h3>
+            <p>Price: $29.99</p>
+            <div class="quantity buttons_added">
+              <input id="minus" type="button" class="minus" value="-">
+              <input id="theInput" type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
+              <input id="plus" type="button" class="plus" value="+">
+            </div>
+        </div>
+      </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We offer the finest selection of perfumes and cosmetics.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: sadatha267@gmail.com</p>
+        <p>phone: +91 6235 667 997</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Perfume & Cosmetics Store</p>
+    </footer>
+</body>
+</html>
